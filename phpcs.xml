@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ruleset name="ruleset">
+	<file>Api</file>
+	<file>Model</file>
+	<file>Setup</file>
+	<exclude-pattern>Test/*</exclude-pattern>
+	<rule ref="Magento2" />
+</ruleset>
