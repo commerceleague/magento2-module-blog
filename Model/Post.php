@@ -14,6 +14,9 @@ use Magento\Framework\Model\AbstractModel;
  */
 class Post extends AbstractModel implements PostInterface
 {
+    public const STATUS_ENABLED = 1;
+    public const STATUS_DISABLED = 0;
+
     /**
      * @inheritDoc
      */
@@ -132,5 +135,13 @@ class Post extends AbstractModel implements PostInterface
     public function setUpdatedAt($updatedAt): PostInterface
     {
         return $this->setData(self::UPDATED_AT, $updatedAt);
+    }
+
+    /**
+     * @return array
+     */
+    public function getAvailableStatuses(): array
+    {
+        return [self::STATUS_ENABLED => __('Enabled'), self::STATUS_DISABLED => __('Disabled')];
     }
 }

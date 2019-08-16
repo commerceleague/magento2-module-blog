@@ -2,4 +2,19 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 	<preference for="CommerceLeague\Blog\Api\Data\PostInterface" type="CommerceLeague\Blog\Model\Post" />
 	<preference for="CommerceLeague\Blog\Api\PostRepositoryInterface" type="CommerceLeague\Blog\Model\PostRepository" />
+	<type name="CommerceLeague\Blog\Model\ResourceModel\Post\Grid\Collection">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">blog_post</argument>
+			<argument name="eventPrefix" xsi:type="string">blog_post_grid_collection</argument>
+			<argument name="eventObject" xsi:type="string">blog_post_grid_collection</argument>
+			<argument name="resourceModel" xsi:type="string">CommerceLeague\Blog\Model\ResourceModel\Post\Collection</argument>
+		</arguments>
+	</type>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="blog_post_listing_data_source" xsi:type="string">CommerceLeague\Blog\Model\ResourceModel\Post\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
 </config>

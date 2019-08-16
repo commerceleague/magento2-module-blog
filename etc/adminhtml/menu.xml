@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="CommerceLeague_Blog::blog_main" title="Blog" module="CommerceLeague_Blog" sortOrder="110" resource="CommerceLeague_Blog::blog_main" parent="Magento_Backend::content" />
+		<add id="CommerceLeague_Blog::blog_post" title="Posts" module="CommerceLeague_Blog" sortOrder="10" resource="CommerceLeague_Blog::blog_post" parent="CommerceLeague_Blog::blog_main" action="blog/post" />
+	</menu>
+</config>
