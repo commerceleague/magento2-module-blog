@@ -108,6 +108,22 @@ class Post extends AbstractModel implements PostInterface
     /**
      * @inheritDoc
      */
+    public function getUrlKey()
+    {
+        return $this->_getData(self::URL_KEY);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setUrlKey($urlKey): PostInterface
+    {
+        return $this->setData(self::URL_KEY, $urlKey);
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function getCreatedAt()
     {
         return $this->_getData(self::CREATED_AT);

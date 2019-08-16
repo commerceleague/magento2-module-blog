@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+	<event name="commerceleague_blog_api_data_postinterface_save_before">
+		<observer name="set_url_key_observer" instance="CommerceLeague\Blog\Observer\Post\SetUrlKeyObserver" />
+		<observer name="validate_url_key_observer" instance="CommerceLeague\Blog\Observer\Post\ValidateUrlKeyObserver" />
+	</event>
+</config>
+
+

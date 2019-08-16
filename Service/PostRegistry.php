@@ -32,7 +32,6 @@ class PostRegistry
      */
     public function get(): ?PostInterface
     {
-        return null;
         return $this->post;
     }
 }

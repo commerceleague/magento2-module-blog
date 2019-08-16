@@ -69,7 +69,11 @@ class DataProvider extends AbstractDataProvider
             return $this->loadedData;
         }
 
-        $items = ($currentPost = $this->postRegistry->get()) ? [$currentPost] : $this->collection->getItems();
+        if (($currentPost = $this->postRegistry->get()) && $currentPost->getId()) {
+            $items = [$currentPost];
+        } else {
+            $items = $this->collection->getItems();
+        }
 
         /** @var PostInterface $item */
         foreach ($items as $item) {

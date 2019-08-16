@@ -14,6 +14,7 @@ interface PostInterface
     public const TITLE = 'title';
     public const CONTENT = 'content';
     public const EXCERPT = 'excerpt';
+    public const URL_KEY = 'url_key';
     public const CREATED_AT = 'created_at';
     public const UPDATED_AT = 'updated_at';
 
@@ -71,6 +72,17 @@ interface PostInterface
      * @return PostInterface
      */
     public function setExcerpt($excerpt): self;
+
+    /**
+     * @return string|null
+     */
+    public function getUrlKey();
+
+    /**
+     * @param string $urlKey
+     * @return PostInterface
+     */
+    public function setUrlKey($urlKey): self;
 
     /**
      * @return string|null
