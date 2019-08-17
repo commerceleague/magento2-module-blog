@@ -9,12 +9,11 @@ use CommerceLeague\Blog\Api\PostRepositoryInterface;
 use CommerceLeague\Blog\Controller\Adminhtml\AbstractPost;
 use CommerceLeague\Blog\Model\Post;
 use CommerceLeague\Blog\Model\PostFactory;
-use CommerceLeague\Blog\Service\PostRegistry;
+use CommerceLeague\Blog\Model\PostRegistry;
 use Magento\Backend\App\Action;
 use Magento\Backend\Model\View\Result\Page as ResultPage;
 use Magento\Backend\Model\View\Result\Redirect;
 use Magento\Framework\App\Action\HttpGetActionInterface;
-use Magento\Framework\App\ResponseInterface;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\View\Result\PageFactory as ResultPageFactory;
 

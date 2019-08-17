@@ -124,6 +124,54 @@ class Post extends AbstractModel implements PostInterface
     /**
      * @inheritDoc
      */
+    public function getMetaTitle()
+    {
+        return $this->_getData(self::META_TITLE);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setMetaTitle($metaTitle): PostInterface
+    {
+        return $this->setData(self::META_TITLE, $metaTitle);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getMetaKeywords()
+    {
+        return $this->_getData(self::META_KEYWORDS);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setMetaKeywords($metaKeywords): PostInterface
+    {
+        return $this->setData(self::META_KEYWORDS, $metaKeywords);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getMetaDescription()
+    {
+        return $this->_getData(self::META_DESCRIPTION);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setMetaDescription($metaDescription): PostInterface
+    {
+        return $this->setData(self::META_DESCRIPTION, $metaDescription);
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function getCreatedAt()
     {
         return $this->_getData(self::CREATED_AT);

@@ -3,14 +3,14 @@ declare(strict_types=1);
 /**
  */
 
-namespace CommerceLeague\Blog\Model;
+namespace CommerceLeague\Blog\Service;
 
 use Magento\Framework\Filter\FilterManager;
 
 /**
- * Class UrlKeyGenerator
+ * Class UrlKeyGeneratorService
  */
-class UrlKeyGenerator
+class UrlKeyGeneratorService
 {
     /**
      * @var FilterManager

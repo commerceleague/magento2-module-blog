@@ -18,8 +18,12 @@
 	<filter>
 		<whitelist>
 			<directory suffix=".php">Api</directory>
+			<directory suffix=".php">Block</directory>
 			<directory suffix=".php">Model</directory>
+			<directory suffix=".php">Observer</directory>
+			<directory suffix=".php">Service</directory>
 			<directory suffix=".php">Setup</directory>
+			<directory suffix=".php">Ui</directory>
 		</whitelist>
 	</filter>
 </phpunit>

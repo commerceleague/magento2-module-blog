@@ -5,9 +5,8 @@ declare(strict_types=1);
 
 namespace CommerceLeague\Blog\Block\Adminhtml\Post\Edit;
 
-
 use CommerceLeague\Blog\Api\PostRepositoryInterface;
-use CommerceLeague\Blog\Service\PostRegistry;
+use CommerceLeague\Blog\Model\PostRegistry;
 use Magento\Backend\Block\Widget\Context;
 use Magento\Framework\Exception\NoSuchEntityException;
 

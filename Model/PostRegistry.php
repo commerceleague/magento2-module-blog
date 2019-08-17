@@ -3,7 +3,7 @@ declare(strict_types=1);
 /**
  */
 
-namespace CommerceLeague\Blog\Service;
+namespace CommerceLeague\Blog\Model;
 
 use CommerceLeague\Blog\Api\Data\PostInterface;
 

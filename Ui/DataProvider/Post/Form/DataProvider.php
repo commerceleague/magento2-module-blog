@@ -8,7 +8,7 @@ namespace CommerceLeague\Blog\Ui\DataProvider\Post\Form;
 use CommerceLeague\Blog\Api\Data\PostInterface;
 use CommerceLeague\Blog\Model\ResourceModel\Post\CollectionFactory;
 use CommerceLeague\Blog\Model\ResourceModel\Post\Collection;
-use CommerceLeague\Blog\Service\PostRegistry;
+use CommerceLeague\Blog\Model\PostRegistry;
 use Magento\Ui\DataProvider\AbstractDataProvider;
 
 /**

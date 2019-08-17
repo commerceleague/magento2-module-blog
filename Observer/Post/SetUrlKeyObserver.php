@@ -6,7 +6,7 @@ declare(strict_types=1);
 namespace CommerceLeague\Blog\Observer\Post;
 
 use CommerceLeague\Blog\Model\Post;
-use CommerceLeague\Blog\Model\UrlKeyGenerator;
+use CommerceLeague\Blog\Service\UrlKeyGeneratorService;
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
 
@@ -16,16 +16,16 @@ use Magento\Framework\Event\ObserverInterface;
 class SetUrlKeyObserver implements ObserverInterface
 {
     /**
-     * @var UrlKeyGenerator
+     * @var UrlKeyGeneratorService
      */
-    private $urlKeyGenerator;
+    private $urlKeyGeneratorService;
 
     /**
-     * @param UrlKeyGenerator $urlKeyGenerator
+     * @param UrlKeyGeneratorService $urlKeyGeneratorService
      */
-    public function __construct(UrlKeyGenerator $urlKeyGenerator)
+    public function __construct(UrlKeyGeneratorService $urlKeyGeneratorService)
     {
-        $this->urlKeyGenerator = $urlKeyGenerator;
+        $this->urlKeyGeneratorService = $urlKeyGeneratorService;
     }
 
     /**
@@ -38,7 +38,7 @@ class SetUrlKeyObserver implements ObserverInterface
 
         $urlKey = $post->getUrlKey();
         if ($urlKey === '' || $urlKey === null) {
-            $post->setUrlKey($this->urlKeyGenerator->generateUrlKey($post->getTitle()));
+            $post->setUrlKey($this->urlKeyGeneratorService->generateUrlKey($post->getTitle()));
         }
     }
 }
